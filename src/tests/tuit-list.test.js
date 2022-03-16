@@ -1,4 +1,4 @@
-import {Tuits} from "../components/tuits/index";
+import Tuits from "../components/tuits/index";
 import {screen, render} from "@testing-library/react";
 import {HashRouter} from "react-router-dom";
 import {findAllTuits} from "../services/tuits-service";
@@ -7,41 +7,28 @@ import {UserList} from "../components/profile/user-list";
 
 
 const MOCKED_USERS = [
-    {username: "alice", password: "wonderland", email: "alice@wonderland.com", _id: "567"},
-    {username: "bob", password: "rasta", email: "bob@reggae.com", _id: "890"},
-    {username: "charlie", password: "peanuts", email: "charlie@peanuts.com", _id: "012"}
+    {username: "alice", password: "wonderland", email: "alice@wonderland.com", _id: "997"},
+    {username: "bob", password: "rasta", email: "bob@reggae.com", _id: "998"},
+    {username: "charlie", password: "peanuts", email: "charlie@peanuts.com", _id: "999"}
 ];
 
 const MOCKED_TUITS = [
-    {tuit: "alice's tuit", postedBy: {
-        username: "alice",
-            password: "wonderland",
-            email: "alice@wonderland.com",
-            _id: "567"}},
-    {tuit: "bob's tuit", postedBy: {
-        username: "bob",
-            password: "rasta",
-            email: "bob@reggae.com",
-            _id: "890"}},
-    {tuit: "charlie's tuit", postedBy: {
-        username: "charlie",
-            password: "peanuts",
-            email: "charlie@peanuts.com",
-            _id: "012"}}
+    {tuit: "alice's tuit", postedBy: ""},
+    {tuit: "bob's tuit", postedBy: ""},
+    {tuit: "charlie's tuit", postedBy: ""}
 ];
 
-/*let i;
+let i;
 for(i = 0; i < MOCKED_USERS.length; i++) {
     MOCKED_TUITS[i].postedBy = MOCKED_USERS[i];
 };
-console.log(MOCKED_TUITS);*/
 
 test('tuit list renders static tuit array', () => {
     // 'Insert' mocked users first
-    /*render(
+    render(
         <HashRouter>
             <UserList users={MOCKED_USERS}/>
-        </HashRouter>);*/
+        </HashRouter>);
     // Then 'insert' mocked tuits
     render(
         <HashRouter>
@@ -57,6 +44,7 @@ test('tuit list renders async', async () => {
       <HashRouter>
           <Tuits tuits={tuits}/>
       </HashRouter>);
-  const linkElement = screen.getByText(/bob's tuit/i);
+  const linkElement = screen.getByText(
+      /In 2021, our @NASAPersevere Mars rover landed and our Ingenuity helicopter took flight. Two asteroid missions launched to the skies, and another began its journey home to Earth./i);
   expect(linkElement).toBeInTheDocument();
 })
