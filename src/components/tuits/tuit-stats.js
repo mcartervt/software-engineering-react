@@ -1,3 +1,8 @@
+/**
+ * @file Renders the like and dislike button & their respective
+ *       counts on individual tuits using their stats.
+ */
+
 import React from "react";
 
 const TuitStats = ({tuit, likeTuit, dislikeTuit = () => {}}) => {

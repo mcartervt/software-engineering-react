@@ -1,3 +1,8 @@
+/**
+ * @file Counter that can increase and decrease by 1.  Used
+ *       in counter.test.js.
+ */
+
 import {useState} from "react";
 const Counter = ({initialCount = 12}) => {
     const [count, setCount] = useState(initialCount);

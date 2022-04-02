@@ -1,3 +1,9 @@
+/**
+ * @file Loops through an array of tuits and
+ *       creates Tuit objects with an id and
+ *       the provided text.
+ */
+
 import Tuit from "./tuit";
 
 const Tuits = ({tuits = []}) => {

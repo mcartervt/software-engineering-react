@@ -1,3 +1,8 @@
+/**
+* @file Houses the functions associated with Likes in
+*       React, including toggle.
+*/
+
 import axios from "axios";
 
 const BASE_URL = process.env.REACT_APP_BASE_URL; //"https://cs5500-02.herokuapp.com";

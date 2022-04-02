@@ -1,3 +1,7 @@
+/**
+ * @file Tests to show the Counter can increase and decrease by 1.
+ */
+
 import renderer, {act, create} from 'react-test-renderer';
 import Counter from "./counter";
 

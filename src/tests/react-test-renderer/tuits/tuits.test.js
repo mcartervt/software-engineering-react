@@ -1,3 +1,7 @@
+/**
+ * @file Test that shows Tuits render in React/Netlify
+ */
+
 import {act, create} from "react-test-renderer"
 import tuitsJson from "./tuits.json"
 import Tuits from "./tuits";

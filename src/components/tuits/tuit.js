@@ -1,3 +1,9 @@
+/**
+ * @file Determines the age of a Tuit, as well as shows the User who posted,
+ *       it, what it says, provides the ability to delete it, handles video
+ *       & images, and shows number of Likes and Dislikes.
+ */
+
 import React from "react";
 import TuitStats from "./tuit-stats";
 import TuitImage from "./tuit-image";

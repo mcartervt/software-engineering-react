@@ -1,3 +1,9 @@
+/**
+ * @file Renders the Tuits page, each Tuit includes the ability to Like it,
+ *       Dislike it, and/or Delete it.  Also handles toggling between Likes
+ *       and Dislikes.
+ */
+
 import React from "react";
 import './tuits.css';
 import Tuit from "./tuit";

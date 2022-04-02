@@ -1,3 +1,8 @@
+/**
+ * @file Renders the Profile page including nav items/tabs likes,
+ *       dislikes, etc.
+ */
+
 import React, {useEffect, useState} from "react";
 import MyTuits from "./my-tuits";
 import {HashRouter, Link, Route, Routes, useNavigate, useLocation} from "react-router-dom";
